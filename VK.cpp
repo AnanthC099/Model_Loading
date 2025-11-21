@@ -5475,32 +5475,38 @@ VkResult createDecriptorSetLayout(void) // rikami plate
 		const VkSampler* pImmutableSamplers;
 	} VkDescriptorSetLayoutBinding;*/
 
-	VkDescriptorSetLayoutBinding vkDescriptorSetLayoutBinding;
-	memset((void*)&vkDescriptorSetLayoutBinding, 0, sizeof(VkDescriptorSetLayoutBinding));
+        VkDescriptorSetLayoutBinding vkDescriptorSetLayoutBinding[2];
+        memset((void*)vkDescriptorSetLayoutBinding, 0, sizeof(vkDescriptorSetLayoutBinding));
 
-	vkDescriptorSetLayoutBinding.descriptorType     = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
-	vkDescriptorSetLayoutBinding.binding		    = 0; // this 0 is related with vertex shader in binding = 0
-	vkDescriptorSetLayoutBinding.descriptorCount    = 1;
-	vkDescriptorSetLayoutBinding.stageFlags		    = VK_SHADER_STAGE_VERTEX_BIT; // stages = shader ch nav(vertex, fragment)
-	vkDescriptorSetLayoutBinding.pImmutableSamplers = NULL;
+        vkDescriptorSetLayoutBinding[0].descriptorType     = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+        vkDescriptorSetLayoutBinding[0].binding                = 0; // this 0 is related with vertex shader in binding = 0
+        vkDescriptorSetLayoutBinding[0].descriptorCount    = 1;
+        vkDescriptorSetLayoutBinding[0].stageFlags             = VK_SHADER_STAGE_VERTEX_BIT; // stages = shader ch nav(vertex, fragment)
+        vkDescriptorSetLayoutBinding[0].pImmutableSamplers = NULL;
 
-	//Step 03: while writing this UDF declare, memset and initialise struct VkDescriptorLayoutCreateInfo particulare 2 members 1. bindingCount. 2. pBindings array
-	/*typedef struct VkDescriptorSetLayoutCreateInfo {
-		VkStructureType                        sType;
-		const void* pNext;
-		VkDescriptorSetLayoutCreateFlags       flags;
-		uint32_t                               bindingCount;
-		const VkDescriptorSetLayoutBinding* pBindings;
-	} VkDescriptorSetLayoutCreateInfo;*/
+        vkDescriptorSetLayoutBinding[1].descriptorType     = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+        vkDescriptorSetLayoutBinding[1].binding                = 1; // matches sampler binding in fragment shader
+        vkDescriptorSetLayoutBinding[1].descriptorCount    = 1;
+        vkDescriptorSetLayoutBinding[1].stageFlags             = VK_SHADER_STAGE_FRAGMENT_BIT;
+        vkDescriptorSetLayoutBinding[1].pImmutableSamplers = NULL;
 
-	VkDescriptorSetLayoutCreateInfo vkDescriptorSetLayoutCreateInfo;
-	memset((void *)&vkDescriptorSetLayoutCreateInfo, 0, sizeof(VkDescriptorSetLayoutCreateInfo));
+        //Step 03: while writing this UDF declare, memset and initialise struct VkDescriptorLayoutCreateInfo particulare 2 members 1. bindingCount. 2. pBindings array
+        /*typedef struct VkDescriptorSetLayoutCreateInfo {
+                VkStructureType                        sType;
+                const void* pNext;
+                VkDescriptorSetLayoutCreateFlags       flags;
+                uint32_t                               bindingCount;
+                const VkDescriptorSetLayoutBinding* pBindings;
+        } VkDescriptorSetLayoutCreateInfo;*/
 
-	vkDescriptorSetLayoutCreateInfo.sType		 = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
-	vkDescriptorSetLayoutCreateInfo.pNext		 = NULL;
-	vkDescriptorSetLayoutCreateInfo.flags		 = 0;
-	vkDescriptorSetLayoutCreateInfo.bindingCount = 1;
-	vkDescriptorSetLayoutCreateInfo.pBindings	 = &vkDescriptorSetLayoutBinding;
+        VkDescriptorSetLayoutCreateInfo vkDescriptorSetLayoutCreateInfo;
+        memset((void *)&vkDescriptorSetLayoutCreateInfo, 0, sizeof(VkDescriptorSetLayoutCreateInfo));
+
+        vkDescriptorSetLayoutCreateInfo.sType            = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
+        vkDescriptorSetLayoutCreateInfo.pNext            = NULL;
+        vkDescriptorSetLayoutCreateInfo.flags            = 0;
+        vkDescriptorSetLayoutCreateInfo.bindingCount = _ARRAYSIZE(vkDescriptorSetLayoutBinding);
+        vkDescriptorSetLayoutCreateInfo.pBindings        = vkDescriptorSetLayoutBinding;
 
 	//uint32_t binding;
 	//VkDescriptorType descriptorType;
@@ -5591,31 +5597,33 @@ VkResult createDescriptorPool(void)
 		uint32_t            descriptorCount;
 	} VkDescriptorPoolSize;*/
 
-	VkDescriptorPoolSize vkDescriptorPoolSize;
-	memset((void*)&vkDescriptorPoolSize, 0, sizeof(VkDescriptorPoolSize));
+        VkDescriptorPoolSize vkDescriptorPoolSize[2];
+        memset((void*)vkDescriptorPoolSize, 0, sizeof(vkDescriptorPoolSize));
 
-	vkDescriptorPoolSize.type			 = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
-	vkDescriptorPoolSize.descriptorCount = 1;
+        vkDescriptorPoolSize[0].type                        = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+        vkDescriptorPoolSize[0].descriptorCount = 1;
 
-	// create pool
-	/*typedef struct VkDescriptorPoolCreateInfo {
-		VkStructureType                sType;
-		const void* pNext;
-		VkDescriptorPoolCreateFlags    flags;
-		uint32_t                       maxSets;
-		uint32_t                       poolSizeCount;
-		const VkDescriptorPoolSize* pPoolSizes;
-	} VkDescriptorPoolCreateInfo;*/
+        vkDescriptorPoolSize[1].type                        = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+        vkDescriptorPoolSize[1].descriptorCount = 1;
+        // create pool
+        /*typedef struct VkDescriptorPoolCreateInfo {
+                VkStructureType                sType;
+                const void* pNext;
+                VkDescriptorPoolCreateFlags    flags;
+                uint32_t                       maxSets;
+                uint32_t                       poolSizeCount;
+                const VkDescriptorPoolSize* pPoolSizes;
+        } VkDescriptorPoolCreateInfo;*/
 
-	VkDescriptorPoolCreateInfo vkDescriptorPoolCreateInfo;
-	memset((void*)&vkDescriptorPoolCreateInfo, 0, sizeof(VkDescriptorPoolCreateInfo));
+        VkDescriptorPoolCreateInfo vkDescriptorPoolCreateInfo;
+        memset((void*)&vkDescriptorPoolCreateInfo, 0, sizeof(VkDescriptorPoolCreateInfo));
 
-	vkDescriptorPoolCreateInfo.sType		 = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
-	vkDescriptorPoolCreateInfo.pNext		 = NULL;
-	vkDescriptorPoolCreateInfo.flags	 	 = 0;
-	vkDescriptorPoolCreateInfo.poolSizeCount = 1; // array pn deu shakto
-	vkDescriptorPoolCreateInfo.pPoolSizes	 = &vkDescriptorPoolSize;
-	vkDescriptorPoolCreateInfo.maxSets		 = 1;
+        vkDescriptorPoolCreateInfo.sType                 = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
+        vkDescriptorPoolCreateInfo.pNext                 = NULL;
+        vkDescriptorPoolCreateInfo.flags                 = 0;
+        vkDescriptorPoolCreateInfo.poolSizeCount = _ARRAYSIZE(vkDescriptorPoolSize); // array pn deu shakto
+        vkDescriptorPoolCreateInfo.pPoolSizes    = vkDescriptorPoolSize;
+        vkDescriptorPoolCreateInfo.maxSets               = 1;
 
 	/*VkResult vkCreateDescriptorPool(
 		VkDevice                                    device,
@@ -5679,61 +5687,77 @@ VkResult createDescriptorSet(void)
 		fprintf(gpFile, "createDescriptorSet() -> vkAllocateDescriptorSets() successed\n");
 	}
 
-	// describe whether we want buffer as uniform or image as uniform. 
+        // describe whether we want buffer as uniform or image as uniform.
 
-	/*typedef struct VkDescriptorBufferInfo {
-		VkBuffer        buffer;
-		VkDeviceSize    offset;
-		VkDeviceSize    range;
-	} VkDescriptorBufferInfo;*/
+        /*typedef struct VkDescriptorBufferInfo {
+                VkBuffer        buffer;
+                VkDeviceSize    offset;
+                VkDeviceSize    range;
+        } VkDescriptorBufferInfo;*/
 
-	VkDescriptorBufferInfo vkDescriptorBufferInfo;
-	memset((void*)&vkDescriptorBufferInfo, 0, sizeof(VkDescriptorBufferInfo));
+        VkDescriptorBufferInfo vkDescriptorBufferInfo;
+        memset((void*)&vkDescriptorBufferInfo, 0, sizeof(VkDescriptorBufferInfo));
 
-	vkDescriptorBufferInfo.buffer = uniformData.vkBuffer;
-	vkDescriptorBufferInfo.offset = 0;
-	vkDescriptorBufferInfo.range  = sizeof(MyUniformData);
+        vkDescriptorBufferInfo.buffer = uniformData.vkBuffer;
+        vkDescriptorBufferInfo.offset = 0;
+        vkDescriptorBufferInfo.range  = sizeof(MyUniformData);
 
-	// now update the above descriptor directly to the shader
-	// there are two ways to update. 1. Writtingdirectly to the shader or copying from one shader to another shader
-	// we will perfer directly writting to the shader. this required initialisation of following structure
+        VkDescriptorImageInfo vkDescriptorImageInfo;
+        memset((void*)&vkDescriptorImageInfo, 0, sizeof(VkDescriptorImageInfo));
+        vkDescriptorImageInfo.sampler = vkSampler_texture;
+        vkDescriptorImageInfo.imageView = vkImageView_texture;
+        vkDescriptorImageInfo.imageLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
 
-	/*typedef struct VkWriteDescriptorSet {
-		VkStructureType                  sType;
-		const void* pNext;
-		VkDescriptorSet                  dstSet;
-		uint32_t                         dstBinding;
-		uint32_t                         dstArrayElement;
-		uint32_t                         descriptorCount;
-		VkDescriptorType                 descriptorType;
-		const VkDescriptorImageInfo* pImageInfo;
-		const VkDescriptorBufferInfo* pBufferInfo;
-		const VkBufferView* pTexelBufferView;
-	} VkWriteDescriptorSet;*/
+        // now update the above descriptor directly to the shader
+        // there are two ways to update. 1. Writtingdirectly to the shader or copying from one shader to another shader
+        // we will perfer directly writting to the shader. this required initialisation of following structure
 
-	VkWriteDescriptorSet vkWriteDescriptorSet;
-	memset((void*)&vkWriteDescriptorSet, 0, sizeof(VkWriteDescriptorSet));
+        /*typedef struct VkWriteDescriptorSet {
+                VkStructureType                  sType;
+                const void* pNext;
+                VkDescriptorSet                  dstSet;
+                uint32_t                         dstBinding;
+                uint32_t                         dstArrayElement;
+                uint32_t                         descriptorCount;
+                VkDescriptorType                 descriptorType;
+                const VkDescriptorImageInfo* pImageInfo;
+                const VkDescriptorBufferInfo* pBufferInfo;
+                const VkBufferView* pTexelBufferView;
+        } VkWriteDescriptorSet;*/
 
-	vkWriteDescriptorSet.sType			  = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
-	vkWriteDescriptorSet.pNext			  = NULL;
-	vkWriteDescriptorSet.dstSet			  = vkDescriptorSet; //ISSUE
-	vkWriteDescriptorSet.dstBinding		  = 0; // bcouz our uniform binding at 0th indexin shader
-	vkWriteDescriptorSet.dstArrayElement  = 0;
-	vkWriteDescriptorSet.descriptorCount  = 1;
-	vkWriteDescriptorSet.descriptorType   = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
-	vkWriteDescriptorSet.pImageInfo		  = NULL;
-	vkWriteDescriptorSet.pBufferInfo	  = &vkDescriptorBufferInfo;
-	vkWriteDescriptorSet.pTexelBufferView = NULL; // texture chya veli lagel
+        VkWriteDescriptorSet vkWriteDescriptorSet[2];
+        memset((void*)vkWriteDescriptorSet, 0, sizeof(vkWriteDescriptorSet));
 
-	/*void vkUpdateDescriptorSets(
-		VkDevice                                    device,
-		uint32_t                                    descriptorWriteCount,
-		const VkWriteDescriptorSet * pDescriptorWrites,
-		uint32_t                                    descriptorCopyCount,
-		const VkCopyDescriptorSet * pDescriptorCopies);*/
+        vkWriteDescriptorSet[0].sType                        = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+        vkWriteDescriptorSet[0].pNext                        = NULL;
+        vkWriteDescriptorSet[0].dstSet                       = vkDescriptorSet;
+        vkWriteDescriptorSet[0].dstBinding           = 0; // bcouz our uniform binding at 0th indexin shader
+        vkWriteDescriptorSet[0].dstArrayElement  = 0;
+        vkWriteDescriptorSet[0].descriptorCount  = 1;
+        vkWriteDescriptorSet[0].descriptorType   = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
+        vkWriteDescriptorSet[0].pImageInfo           = NULL;
+        vkWriteDescriptorSet[0].pBufferInfo          = &vkDescriptorBufferInfo;
+        vkWriteDescriptorSet[0].pTexelBufferView = NULL; // texture chya veli lagel
 
-	vkUpdateDescriptorSets(vkDevice, 1, &vkWriteDescriptorSet, 0, NULL);
+        vkWriteDescriptorSet[1].sType                        = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+        vkWriteDescriptorSet[1].pNext                        = NULL;
+        vkWriteDescriptorSet[1].dstSet                       = vkDescriptorSet;
+        vkWriteDescriptorSet[1].dstBinding           = 1; // matches sampler binding in fragment shader
+        vkWriteDescriptorSet[1].dstArrayElement  = 0;
+        vkWriteDescriptorSet[1].descriptorCount  = 1;
+        vkWriteDescriptorSet[1].descriptorType   = VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER;
+        vkWriteDescriptorSet[1].pImageInfo           = &vkDescriptorImageInfo;
+        vkWriteDescriptorSet[1].pBufferInfo          = NULL;
+        vkWriteDescriptorSet[1].pTexelBufferView = NULL;
 
+        /*void vkUpdateDescriptorSets(
+                VkDevice                                    device,
+                uint32_t                                    descriptorWriteCount,
+                const VkWriteDescriptorSet * pDescriptorWrites,
+                uint32_t                                    descriptorCopyCount,
+                const VkCopyDescriptorSet * pDescriptorCopies);*/
+
+        vkUpdateDescriptorSets(vkDevice, _ARRAYSIZE(vkWriteDescriptorSet), vkWriteDescriptorSet, 0, NULL);
 	fprintf(gpFile, "\n=======================================================================================\n");
 
 	return vkResult;
