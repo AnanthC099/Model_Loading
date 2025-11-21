@@ -4,19 +4,16 @@ WinMain() -> Program Started Successfully
 fillInstanceExtenstionsNames() -> 1st call to vkEnumerateInstanceExtensionProperties() is successed. 
 fillInstanceExtenstionsNames() -> 2nd call to vkEnumerateInstanceExtensionProperties() is successed. 
 fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_device_group_creation
-fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_get_physical_device_properties2
-fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_get_surface_capabilities2
-fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_surface
-fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_win32_surface
-fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_EXT_debug_report
-fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_EXT_debug_utils
-fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_display
 fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_external_fence_capabilities
 fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_external_memory_capabilities
 fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_external_semaphore_capabilities
-fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_get_display_properties2
+fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_get_physical_device_properties2
+fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_get_surface_capabilities2
+fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_surface
 fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_surface_protected_capabilities
-fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_EXT_direct_mode_display
+fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_KHR_win32_surface
+fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_EXT_debug_report
+fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_EXT_debug_utils
 fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_EXT_surface_maintenance1
 fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_EXT_swapchain_colorspace
 fillInstanceExtenstionsNames() -> Vulkan Extension Name = VK_NV_external_memory_capabilities
@@ -34,9 +31,13 @@ createVulkanInstance() -> fillInstanceExtenstionsNames() is successed.
 fillValidationLayerNames() -> 1st call to vkEnumerateInstanceLayerProperties() is successed. 
 fillValidationLayerNames() -> 2nd call to vkEnumerateInstanceLayerProperties() is successed. 
 fillValidationLayerNames() -> Vulkan validation layer Name = VK_LAYER_NV_optimus
-fillValidationLayerNames() -> Vulkan validation layer Name = VK_LAYER_NV_gr2608
-fillValidationLayerNames() -> Vulkan validation layer Name = VK_LAYER_OBS_HOOK
+fillValidationLayerNames() -> Vulkan validation layer Name = VK_LAYER_NV_present
+fillValidationLayerNames() -> Vulkan validation layer Name = VK_LAYER_NV_nomad_release_public_2025_3_0
+fillValidationLayerNames() -> Vulkan validation layer Name = VK_LAYER_NV_GPU_Trace_release_public_2025_3_0
+fillValidationLayerNames() -> Vulkan validation layer Name = VK_LAYER_NV_ngfx_capture_release_public_2025_3_0
+fillValidationLayerNames() -> Vulkan validation layer Name = VK_LAYER_NV_shader_debugger_release_public_2025_3_0
 fillValidationLayerNames() -> Vulkan validation layer Name = VK_LAYER_RENDERDOC_Capture
+fillValidationLayerNames() -> Vulkan validation layer Name = VK_LAYER_OBS_HOOK
 fillValidationLayerNames() -> Vulkan validation layer Name = VK_LAYER_LUNARG_api_dump
 fillValidationLayerNames() -> Vulkan validation layer Name = VK_LAYER_LUNARG_gfxreconstruct
 fillValidationLayerNames() -> Vulkan validation layer Name = VK_LAYER_KHRONOS_synchronization2
@@ -77,38 +78,18 @@ getPhysicalDevice() -> selected physical device support geometryShader.
 initialise() -> getPhysicalDevice() is successed. 
 
 ================== Print Vulkan Info ========================
-Api Version : 1.4.303 
-Device Name : NVIDIA GeForce RTX 4060 Laptop GPU 
+Api Version : 1.4.312 
+Device Name : NVIDIA GeForce RTX 4090 
 Device Type : Discrte Gpu (dGPU) 
 vendorID : 0x10de
-deviceID : 0x28a0
-Api Version : 1.2.325 
-Device Name : Microsoft Direct3D12 (NVIDIA GeForce RTX 4060 Laptop GPU) 
-Device Type : Discrte Gpu (dGPU) 
-vendorID : 0x10de
-deviceID : 0x28a0
-Api Version : 1.4.323 
-Device Name : Intel(R) RaptorLake-S Mobile Graphics Controller 
-Device Type : INTEGRATED_GPU (iGPU) 
-vendorID : 0x8086
-deviceID : 0xa788
-Api Version : 1.2.325 
-Device Name : Microsoft Direct3D12 (Intel(R) UHD Graphics) 
-Device Type : INTEGRATED_GPU (iGPU) 
-vendorID : 0x8086
-deviceID : 0xa788
-Api Version : 1.2.325 
-Device Name : Microsoft Direct3D12 (Microsoft Basic Render Driver) 
-Device Type : CPU 
-vendorID : 0x1414
-deviceID : 0x008c
+deviceID : 0x2684
 printVKInfo() -> vkPhysicalDevice_array free done 
 =============================================================
 
 initialise() -> printVkInfo() is successed. 
 
 
-fillDeviceExtenstionsNames() -> deviceExtenstionCount : 237 
+fillDeviceExtenstionsNames() -> deviceExtenstionCount : 251 
 fillDeviceExtenstionsNames() -> 1st call to vkEnumerateDeviceExtensionProperties() is successed. 
 fillDeviceExtenstionsNames() -> 2nd call to vkEnumerateDeviceExtensionProperties() is successed. 
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_16bit_storage
@@ -123,6 +104,7 @@ fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_copy_comma
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_create_renderpass2
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_dedicated_allocation
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_deferred_host_operations
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_depth_clamp_zero_one
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_depth_stencil_resolve
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_descriptor_update_template
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_device_group
@@ -153,6 +135,7 @@ fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_maintenanc
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_maintenance5
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_maintenance6
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_maintenance7
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_maintenance8
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_map_memory2
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_multiview
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_pipeline_binary
@@ -170,6 +153,7 @@ fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_sampler_mi
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_sampler_ycbcr_conversion
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_separate_depth_stencil_layouts
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_shader_atomic_int64
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_shader_bfloat16
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_shader_clock
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_shader_draw_parameters
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_shader_expect_assume
@@ -198,10 +182,14 @@ fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_video_deco
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_video_decode_h264
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_video_decode_h265
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_video_decode_queue
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_video_decode_vp9
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_video_encode_av1
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_video_encode_h264
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_video_encode_h265
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_video_encode_quantization_map
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_video_encode_queue
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_video_maintenance1
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_video_maintenance2
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_video_queue
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_vulkan_memory_model
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_KHR_win32_keyed_mutex
@@ -226,6 +214,7 @@ fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_depth_clip
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_depth_range_unrestricted
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_descriptor_buffer
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_descriptor_indexing
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_device_address_binding_report
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_device_fault
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_device_generated_commands
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_discard_rectangles
@@ -266,6 +255,7 @@ fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_pipeline_c
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_pipeline_library_group_handles
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_pipeline_robustness
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_post_depth_coverage
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_present_mode_fifo_latest_ready
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_primitive_topology_list_restart
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_primitives_generated_query
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_private_data
@@ -291,14 +281,15 @@ fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_texel_buff
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_tooling_info
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_transform_feedback
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_vertex_attribute_divisor
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_vertex_attribute_robustness
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_vertex_input_dynamic_state
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_ycbcr_2plane_444_formats
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_EXT_ycbcr_image_arrays
-fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_acquire_winrt_display
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_clip_space_w_scaling
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_cluster_acceleration_structure
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_compute_shader_derivatives
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_cooperative_matrix
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_cooperative_matrix2
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_cooperative_vector
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_copy_memory_indirect
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_corner_sampled_image
@@ -311,6 +302,8 @@ fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_device_diag
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_device_diagnostics_config
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_device_generated_commands
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_device_generated_commands_compute
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_disk_cache_utils
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_external_compute_queue
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_external_memory
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_external_memory_win32
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_fill_rectangle
@@ -320,6 +313,7 @@ fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_fragment_sh
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_framebuffer_mixed_samples
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_geometry_shader_passthrough
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_inherited_viewport_scissor
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_internal_nvpresent
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_linear_color_attachment
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_low_latency
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NV_low_latency2
@@ -347,6 +341,7 @@ fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NVX_binary_imp
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NVX_image_view_handle
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_NVX_multiview_per_view_attributes
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_AMD_buffer_marker
+fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_GOOGLE_hlsl_functionality1
 fillDeviceExtenstionsNames() -> Vulkan Device Extension Name = VK_GOOGLE_user_type
 fillDeviceExtenstionsNames() -> VK_KHR_SWAPCHAIN_EXTENSION_NAME found 
 fillDeviceExtenstionsNames() ->enabledDeviceExtenstionCount :: 1 
@@ -366,7 +361,7 @@ getDeviceQueue() -> vkGetDeviceQueue() is successful
 
 getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 1st call is successed. 
 getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 2nd call  is successed. 
-getPhysicalDeviceSurfaceFormatAndColorSpace() -> formatCount: 7 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> formatCount: 5 
 getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkSurfaceFormatKHR_array free 
 =====================================================================================
 createSwapchain() -> getPhysicalDeviceSurfaceFormatAndColorSpace() is successed. 
@@ -376,7 +371,7 @@ createSwapchain() -> if vkSurfaceTransformFlagBitsKHR = VK_SURFACE_TRANSFORM_IDE
 =====================================================================================
 
 getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 1st call is successed. 
-getPhysicalDevicePresentMode() -> presentationModesCount : 4 
+getPhysicalDevicePresentMode() -> presentationModesCount : 5 
 getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 2nd call is successed. 
 getPhysicalDevicePresentMode() -> for loop -> vkPresentModeKHR = VK_PRESENT_MODE_MAILBOX_KHR; 
 getPhysicalDevicePresentMode() -> vkPresentModeKHR_array() free done
@@ -542,9 +537,6 @@ initialise() -> createRenderPass() is successed.
 createPipeline() : 07th May 2025
 
 createPipeline() -> vkCreatePipelineCache() successed
-
-RMK_VALIDATION : debugReportCallBack() -> Validation (0) = vkCreateGraphicsPipelines(): pCreateInfos[0].pStages[1] SPIR-V (VK_SHADER_STAGE_FRAGMENT_BIT) uses descriptor [Set 0, Binding 1, variable "uTextureSampler"] (type VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER) but was not declared in the pipeline layout.
-The Vulkan spec states: If a resource variable is declared in a shader, the corresponding descriptor set in layout must match the shader stage (https://vulkan.lunarg.com/doc/view/1.4.321.1/windows/antora/spec/latest/chapters/pipelines.html#VUID-VkGraphicsPipelineCreateInfo-layout-07988) 
 createPipeline() -> vkCreateGraphicsPipelines() successed
 
 ===========================================================================================================================
@@ -582,50 +574,667 @@ buildCommandBuffer() : 21st March 2025
 
 buildCommandBuffer() -> vkResetCommandBuffer() successed to reset for ith index 0
 buildCommandBuffer() -> vkBeginCommandBuffer() successed at ith index 0
-
-RMK_VALIDATION : debugReportCallBack() -> Validation (0) = vkCmdDrawIndexed(): VkDescriptorSet 0x210000000021 [Set 0, Binding 1, variable "uTextureSampler"] is invalid.
-The Vulkan spec states: Descriptors in each bound descriptor set, specified via vkCmdBindDescriptorSets, must be valid as described by descriptor validity if they are statically used by the VkPipeline bound to the pipeline bind point used by this command and the bound VkPipeline was not created with VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT (https://vulkan.lunarg.com/doc/view/1.4.321.1/windows/antora/spec/latest/chapters/drawing.html#VUID-vkCmdDrawIndexed-None-08114) 
 buildCommandBuffer() -> vkEndCommandBuffer() successed at ith index 0
 buildCommandBuffer() -> vkResetCommandBuffer() successed to reset for ith index 1
 buildCommandBuffer() -> vkBeginCommandBuffer() successed at ith index 1
-
-RMK_VALIDATION : debugReportCallBack() -> Validation (0) = vkCmdDrawIndexed(): VkDescriptorSet 0x210000000021 [Set 0, Binding 1, variable "uTextureSampler"] is invalid.
-The Vulkan spec states: Descriptors in each bound descriptor set, specified via vkCmdBindDescriptorSets, must be valid as described by descriptor validity if they are statically used by the VkPipeline bound to the pipeline bind point used by this command and the bound VkPipeline was not created with VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT (https://vulkan.lunarg.com/doc/view/1.4.321.1/windows/antora/spec/latest/chapters/drawing.html#VUID-vkCmdDrawIndexed-None-08114) 
 buildCommandBuffer() -> vkEndCommandBuffer() successed at ith index 1
 
 =======================================================================================
 initialise() -> buildCommandBuffer() is successed. 
 initialise() -> initialisation is successed. 
 WinMain() -> initialise() is successed. 
-uninitialise() -> vkDeviceWaitIdle() is done. 
-uninitialise() -> vkDestroyFence() is done. 
-uninitialise() -> vkDestroySemaphore() is done. for vkSemaphore_renderComplete
-uninitialise() -> vkDestroySemaphore() is done. for vkSemaphore_backBuffer
-uninitialise() -> vkDestroyFramebuffer() is done. 
+resize() -> vkDevice vkDeviceWaitIdle() is done. 
+resize() -> vkDestroyFramebuffer() is done. 
+resize() -> vkFreeCommandBuffers() is done. 
 uninitialise() -> vkDestroyPipeline() is done. 
-uninitialise() -> vkDestroyRenderPass() is done. 
-uninitialise() -> vkDestroyDescriptorPool() is done. vkDescriptorPool and vkDescriptorSet are destroy successfully.
-uninitialise() -> vkDestroyPipelineLayout() is done.
-uninitialise() -> vkDescriptorSetLayout() is done.
-uninitialise() -> vkDestroyShaderModule() is done. for  vkShaderModule_fragment_shader
-uninitialise() -> vkDestroyShaderModule() is done. for  vkShaderModule_vertex_shader
-uninitialise() -> vkDestroyBuffer() is done for uniformData.vkBuffer
-uninitialise() -> vkFreeMemory() is done for uniformData.vkDeviceMemory
-uninitialize() -> vkDestroySampler()
-uninitialize() -> vkDestroyImageView()
-uninitialize() -> vkDeviceMemory_texture()
-uninitialize() -> vkImage_texture
-uninitialise() -> vkFreeCommandBuffers() is done. 
-uninitialise() -> vkCommandBuffer_array is free. 
-uninitialise() -> vkDestroyCommandPool() is done. 
-uninitialise() -> vkDestroyImageView() for vkImageView_depth is done. 
-uninitialise() -> vkFreeMemory() is done for depth : vkDeviceMemory_depth. 
-uninitialise() -> vkDestroyImage() is done for depth : vkImage_depth. 
-uninitialise() -> vkDestroyImageView() is done. 
-uninitialise() -> swapchainimageView_array is free. 
-uninitialise() -> swapchainImage_array is free. 
-uninitialise() -> vkDestroySwapchainKHR() is done. 
-uninitialise() -> vkDestroySurfaceKHR() succeeded
-uninitialise() -> vkDebugReportCallbackEXT && vkDestroyDebugReportCallbackEXT_fnptr succeeded
-uninitialise() -> vkDestroyInstance() succeeded
-uninitialise() -> Program Ended Successfully........ 
+resize() -> vkDestroyPipelineLayout() is done.
+resize() -> vkDestroyRenderPass() is done. 
+resize() -> vkDestroyImageView() is done. 
+resize() -> swapchainimageView_array is free. 
+resize() -> swapchainImage_array is free. 
+resize() -> vkDestroySwapchainKHR() is done. 
+=====================================================================================
+
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 1st call is successed. 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 2nd call  is successed. 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> formatCount: 5 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkSurfaceFormatKHR_array free 
+=====================================================================================
+createSwapchain() -> getPhysicalDeviceSurfaceFormatAndColorSpace() is successed. 
+createSwapchain() -> vkGetPhysicalDeviceSurfaceCapabilitiesKHR() is successed. 
+createSwapchain() -> in if () swapchain image width X height = 1920 X 1080 
+createSwapchain() -> if vkSurfaceTransformFlagBitsKHR = VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR
+=====================================================================================
+
+getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 1st call is successed. 
+getPhysicalDevicePresentMode() -> presentationModesCount : 5 
+getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 2nd call is successed. 
+getPhysicalDevicePresentMode() -> for loop -> vkPresentModeKHR = VK_PRESENT_MODE_MAILBOX_KHR; 
+getPhysicalDevicePresentMode() -> vkPresentModeKHR_array() free done
+
+=====================================================================================
+createSwapchain() -> getPhysicalDevicePresentMode() is successed. 
+createSwapchain() -> vkCreateSwapchainKHR() is successed. 
+
+=======================================================================================
+createImagesAndImageView() : 06th March 2025
+
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() 1st call is successed. And swapchain image count 2 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() 2nd call is successed
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() in loop is successed at ith : 0 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() in loop is successed at ith : 1 
+
+=======================================================================================
+
+==================================== For Depth Image =============================================
+
+=======================================================================================
+getSupportedDepthFormat() : 30th July 2025
+
+createImagesAndImageView() -> getSupportedDepthFormat() is successed 
+createImagesAndImageView() -> vkCreateImage() is successed 
+createImagesAndImageView() -> vkAllocateMemory() 
+createUniformBuffer() -> vkBindBufferMemory() 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() for vkImageView_depth is successed : 
+
+=======================================================================================
+RenderPass() : 12th March 2025
+
+createRenderPass() -> vkCreateRenderPass() successed
+
+=======================================================================================
+
+=======================================================================================
+createDecriptorSetLayout() : 30th April 2025
+
+createPipelineLayout() -> vkCreatePipeLineLayout() successed
+
+=======================================================================================
+
+===========================================================================================================================
+createPipeline() : 07th May 2025
+
+createPipeline() -> vkCreatePipelineCache() successed
+createPipeline() -> vkCreateGraphicsPipelines() successed
+
+===========================================================================================================================
+
+=======================================================================================
+createFramebuffers() : 12th March 2025
+
+createFramebuffers() -> vkCreateFramebuffer() successed at ith : 0
+createFramebuffers() -> vkCreateFramebuffer() successed at ith : 1
+
+=======================================================================================
+
+=======================================================================================
+createCommandBuffer() : 06th March 2025
+
+createCommandBuffer() -> vkAllocateCommandBuffers() successed at ith : 0
+createCommandBuffer() -> vkAllocateCommandBuffers() successed at ith : 1
+
+=======================================================================================
+
+=======================================================================================
+buildCommandBuffer() : 21st March 2025
+
+buildCommandBuffer() -> vkResetCommandBuffer() successed to reset for ith index 0
+buildCommandBuffer() -> vkBeginCommandBuffer() successed at ith index 0
+buildCommandBuffer() -> vkEndCommandBuffer() successed at ith index 0
+buildCommandBuffer() -> vkResetCommandBuffer() successed to reset for ith index 1
+buildCommandBuffer() -> vkBeginCommandBuffer() successed at ith index 1
+buildCommandBuffer() -> vkEndCommandBuffer() successed at ith index 1
+
+=======================================================================================
+resize() -> vkDevice vkDeviceWaitIdle() is done. 
+resize() -> vkDestroyFramebuffer() is done. 
+resize() -> vkFreeCommandBuffers() is done. 
+uninitialise() -> vkDestroyPipeline() is done. 
+resize() -> vkDestroyPipelineLayout() is done.
+resize() -> vkDestroyRenderPass() is done. 
+resize() -> vkDestroyImageView() is done. 
+resize() -> swapchainimageView_array is free. 
+resize() -> swapchainImage_array is free. 
+resize() -> vkDestroySwapchainKHR() is done. 
+=====================================================================================
+
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 1st call is successed. 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 2nd call  is successed. 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> formatCount: 5 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkSurfaceFormatKHR_array free 
+=====================================================================================
+createSwapchain() -> getPhysicalDeviceSurfaceFormatAndColorSpace() is successed. 
+createSwapchain() -> vkGetPhysicalDeviceSurfaceCapabilitiesKHR() is successed. 
+createSwapchain() -> in if () swapchain image width X height = 800 X 600 
+createSwapchain() -> if vkSurfaceTransformFlagBitsKHR = VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR
+=====================================================================================
+
+getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 1st call is successed. 
+getPhysicalDevicePresentMode() -> presentationModesCount : 5 
+getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 2nd call is successed. 
+getPhysicalDevicePresentMode() -> for loop -> vkPresentModeKHR = VK_PRESENT_MODE_MAILBOX_KHR; 
+getPhysicalDevicePresentMode() -> vkPresentModeKHR_array() free done
+
+=====================================================================================
+createSwapchain() -> getPhysicalDevicePresentMode() is successed. 
+createSwapchain() -> vkCreateSwapchainKHR() is successed. 
+
+=======================================================================================
+createImagesAndImageView() : 06th March 2025
+
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() 1st call is successed. And swapchain image count 2 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() 2nd call is successed
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() in loop is successed at ith : 0 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() in loop is successed at ith : 1 
+
+=======================================================================================
+
+==================================== For Depth Image =============================================
+
+=======================================================================================
+getSupportedDepthFormat() : 30th July 2025
+
+createImagesAndImageView() -> getSupportedDepthFormat() is successed 
+createImagesAndImageView() -> vkCreateImage() is successed 
+createImagesAndImageView() -> vkAllocateMemory() 
+createUniformBuffer() -> vkBindBufferMemory() 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() for vkImageView_depth is successed : 
+
+=======================================================================================
+RenderPass() : 12th March 2025
+
+createRenderPass() -> vkCreateRenderPass() successed
+
+=======================================================================================
+
+=======================================================================================
+createDecriptorSetLayout() : 30th April 2025
+
+createPipelineLayout() -> vkCreatePipeLineLayout() successed
+
+=======================================================================================
+
+===========================================================================================================================
+createPipeline() : 07th May 2025
+
+createPipeline() -> vkCreatePipelineCache() successed
+createPipeline() -> vkCreateGraphicsPipelines() successed
+
+===========================================================================================================================
+
+=======================================================================================
+createFramebuffers() : 12th March 2025
+
+createFramebuffers() -> vkCreateFramebuffer() successed at ith : 0
+createFramebuffers() -> vkCreateFramebuffer() successed at ith : 1
+
+=======================================================================================
+
+=======================================================================================
+createCommandBuffer() : 06th March 2025
+
+createCommandBuffer() -> vkAllocateCommandBuffers() successed at ith : 0
+createCommandBuffer() -> vkAllocateCommandBuffers() successed at ith : 1
+
+=======================================================================================
+
+=======================================================================================
+buildCommandBuffer() : 21st March 2025
+
+buildCommandBuffer() -> vkResetCommandBuffer() successed to reset for ith index 0
+buildCommandBuffer() -> vkBeginCommandBuffer() successed at ith index 0
+buildCommandBuffer() -> vkEndCommandBuffer() successed at ith index 0
+buildCommandBuffer() -> vkResetCommandBuffer() successed to reset for ith index 1
+buildCommandBuffer() -> vkBeginCommandBuffer() successed at ith index 1
+buildCommandBuffer() -> vkEndCommandBuffer() successed at ith index 1
+
+=======================================================================================
+resize() -> vkDevice vkDeviceWaitIdle() is done. 
+resize() -> vkDestroyFramebuffer() is done. 
+resize() -> vkFreeCommandBuffers() is done. 
+uninitialise() -> vkDestroyPipeline() is done. 
+resize() -> vkDestroyPipelineLayout() is done.
+resize() -> vkDestroyRenderPass() is done. 
+resize() -> vkDestroyImageView() is done. 
+resize() -> swapchainimageView_array is free. 
+resize() -> swapchainImage_array is free. 
+resize() -> vkDestroySwapchainKHR() is done. 
+=====================================================================================
+
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 1st call is successed. 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 2nd call  is successed. 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> formatCount: 5 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkSurfaceFormatKHR_array free 
+=====================================================================================
+createSwapchain() -> getPhysicalDeviceSurfaceFormatAndColorSpace() is successed. 
+createSwapchain() -> vkGetPhysicalDeviceSurfaceCapabilitiesKHR() is successed. 
+createSwapchain() -> in if () swapchain image width X height = 784 X 561 
+createSwapchain() -> if vkSurfaceTransformFlagBitsKHR = VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR
+=====================================================================================
+
+getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 1st call is successed. 
+getPhysicalDevicePresentMode() -> presentationModesCount : 5 
+getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 2nd call is successed. 
+getPhysicalDevicePresentMode() -> for loop -> vkPresentModeKHR = VK_PRESENT_MODE_MAILBOX_KHR; 
+getPhysicalDevicePresentMode() -> vkPresentModeKHR_array() free done
+
+=====================================================================================
+createSwapchain() -> getPhysicalDevicePresentMode() is successed. 
+createSwapchain() -> vkCreateSwapchainKHR() is successed. 
+
+=======================================================================================
+createImagesAndImageView() : 06th March 2025
+
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() 1st call is successed. And swapchain image count 2 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() 2nd call is successed
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() in loop is successed at ith : 0 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() in loop is successed at ith : 1 
+
+=======================================================================================
+
+==================================== For Depth Image =============================================
+
+=======================================================================================
+getSupportedDepthFormat() : 30th July 2025
+
+createImagesAndImageView() -> getSupportedDepthFormat() is successed 
+createImagesAndImageView() -> vkCreateImage() is successed 
+createImagesAndImageView() -> vkAllocateMemory() 
+createUniformBuffer() -> vkBindBufferMemory() 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() for vkImageView_depth is successed : 
+
+=======================================================================================
+RenderPass() : 12th March 2025
+
+createRenderPass() -> vkCreateRenderPass() successed
+
+=======================================================================================
+
+=======================================================================================
+createDecriptorSetLayout() : 30th April 2025
+
+createPipelineLayout() -> vkCreatePipeLineLayout() successed
+
+=======================================================================================
+
+===========================================================================================================================
+createPipeline() : 07th May 2025
+
+createPipeline() -> vkCreatePipelineCache() successed
+createPipeline() -> vkCreateGraphicsPipelines() successed
+
+===========================================================================================================================
+
+=======================================================================================
+createFramebuffers() : 12th March 2025
+
+createFramebuffers() -> vkCreateFramebuffer() successed at ith : 0
+createFramebuffers() -> vkCreateFramebuffer() successed at ith : 1
+
+=======================================================================================
+
+=======================================================================================
+createCommandBuffer() : 06th March 2025
+
+createCommandBuffer() -> vkAllocateCommandBuffers() successed at ith : 0
+createCommandBuffer() -> vkAllocateCommandBuffers() successed at ith : 1
+
+=======================================================================================
+
+=======================================================================================
+buildCommandBuffer() : 21st March 2025
+
+buildCommandBuffer() -> vkResetCommandBuffer() successed to reset for ith index 0
+buildCommandBuffer() -> vkBeginCommandBuffer() successed at ith index 0
+buildCommandBuffer() -> vkEndCommandBuffer() successed at ith index 0
+buildCommandBuffer() -> vkResetCommandBuffer() successed to reset for ith index 1
+buildCommandBuffer() -> vkBeginCommandBuffer() successed at ith index 1
+buildCommandBuffer() -> vkEndCommandBuffer() successed at ith index 1
+
+=======================================================================================
+resize() -> vkDevice vkDeviceWaitIdle() is done. 
+resize() -> vkDestroyFramebuffer() is done. 
+resize() -> vkFreeCommandBuffers() is done. 
+uninitialise() -> vkDestroyPipeline() is done. 
+resize() -> vkDestroyPipelineLayout() is done.
+resize() -> vkDestroyRenderPass() is done. 
+resize() -> vkDestroyImageView() is done. 
+resize() -> swapchainimageView_array is free. 
+resize() -> swapchainImage_array is free. 
+resize() -> vkDestroySwapchainKHR() is done. 
+=====================================================================================
+
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 1st call is successed. 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 2nd call  is successed. 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> formatCount: 5 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkSurfaceFormatKHR_array free 
+=====================================================================================
+createSwapchain() -> getPhysicalDeviceSurfaceFormatAndColorSpace() is successed. 
+createSwapchain() -> vkGetPhysicalDeviceSurfaceCapabilitiesKHR() is successed. 
+createSwapchain() -> in if () swapchain image width X height = 800 X 600 
+createSwapchain() -> if vkSurfaceTransformFlagBitsKHR = VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR
+=====================================================================================
+
+getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 1st call is successed. 
+getPhysicalDevicePresentMode() -> presentationModesCount : 5 
+getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 2nd call is successed. 
+getPhysicalDevicePresentMode() -> for loop -> vkPresentModeKHR = VK_PRESENT_MODE_MAILBOX_KHR; 
+getPhysicalDevicePresentMode() -> vkPresentModeKHR_array() free done
+
+=====================================================================================
+createSwapchain() -> getPhysicalDevicePresentMode() is successed. 
+createSwapchain() -> vkCreateSwapchainKHR() is successed. 
+
+=======================================================================================
+createImagesAndImageView() : 06th March 2025
+
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() 1st call is successed. And swapchain image count 2 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() 2nd call is successed
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() in loop is successed at ith : 0 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() in loop is successed at ith : 1 
+
+=======================================================================================
+
+==================================== For Depth Image =============================================
+
+=======================================================================================
+getSupportedDepthFormat() : 30th July 2025
+
+createImagesAndImageView() -> getSupportedDepthFormat() is successed 
+createImagesAndImageView() -> vkCreateImage() is successed 
+createImagesAndImageView() -> vkAllocateMemory() 
+createUniformBuffer() -> vkBindBufferMemory() 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() for vkImageView_depth is successed : 
+
+=======================================================================================
+RenderPass() : 12th March 2025
+
+createRenderPass() -> vkCreateRenderPass() successed
+
+=======================================================================================
+
+=======================================================================================
+createDecriptorSetLayout() : 30th April 2025
+
+createPipelineLayout() -> vkCreatePipeLineLayout() successed
+
+=======================================================================================
+
+===========================================================================================================================
+createPipeline() : 07th May 2025
+
+createPipeline() -> vkCreatePipelineCache() successed
+createPipeline() -> vkCreateGraphicsPipelines() successed
+
+===========================================================================================================================
+
+=======================================================================================
+createFramebuffers() : 12th March 2025
+
+createFramebuffers() -> vkCreateFramebuffer() successed at ith : 0
+createFramebuffers() -> vkCreateFramebuffer() successed at ith : 1
+
+=======================================================================================
+
+=======================================================================================
+createCommandBuffer() : 06th March 2025
+
+createCommandBuffer() -> vkAllocateCommandBuffers() successed at ith : 0
+createCommandBuffer() -> vkAllocateCommandBuffers() successed at ith : 1
+
+=======================================================================================
+
+=======================================================================================
+buildCommandBuffer() : 21st March 2025
+
+buildCommandBuffer() -> vkResetCommandBuffer() successed to reset for ith index 0
+buildCommandBuffer() -> vkBeginCommandBuffer() successed at ith index 0
+buildCommandBuffer() -> vkEndCommandBuffer() successed at ith index 0
+buildCommandBuffer() -> vkResetCommandBuffer() successed to reset for ith index 1
+buildCommandBuffer() -> vkBeginCommandBuffer() successed at ith index 1
+buildCommandBuffer() -> vkEndCommandBuffer() successed at ith index 1
+
+=======================================================================================
+resize() -> vkDevice vkDeviceWaitIdle() is done. 
+resize() -> vkDestroyFramebuffer() is done. 
+resize() -> vkFreeCommandBuffers() is done. 
+uninitialise() -> vkDestroyPipeline() is done. 
+resize() -> vkDestroyPipelineLayout() is done.
+resize() -> vkDestroyRenderPass() is done. 
+resize() -> vkDestroyImageView() is done. 
+resize() -> swapchainimageView_array is free. 
+resize() -> swapchainImage_array is free. 
+resize() -> vkDestroySwapchainKHR() is done. 
+=====================================================================================
+
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 1st call is successed. 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 2nd call  is successed. 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> formatCount: 5 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkSurfaceFormatKHR_array free 
+=====================================================================================
+createSwapchain() -> getPhysicalDeviceSurfaceFormatAndColorSpace() is successed. 
+createSwapchain() -> vkGetPhysicalDeviceSurfaceCapabilitiesKHR() is successed. 
+createSwapchain() -> in if () swapchain image width X height = 1920 X 1080 
+createSwapchain() -> if vkSurfaceTransformFlagBitsKHR = VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR
+=====================================================================================
+
+getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 1st call is successed. 
+getPhysicalDevicePresentMode() -> presentationModesCount : 5 
+getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 2nd call is successed. 
+getPhysicalDevicePresentMode() -> for loop -> vkPresentModeKHR = VK_PRESENT_MODE_MAILBOX_KHR; 
+getPhysicalDevicePresentMode() -> vkPresentModeKHR_array() free done
+
+=====================================================================================
+createSwapchain() -> getPhysicalDevicePresentMode() is successed. 
+createSwapchain() -> vkCreateSwapchainKHR() is successed. 
+
+=======================================================================================
+createImagesAndImageView() : 06th March 2025
+
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() 1st call is successed. And swapchain image count 2 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() 2nd call is successed
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() in loop is successed at ith : 0 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() in loop is successed at ith : 1 
+
+=======================================================================================
+
+==================================== For Depth Image =============================================
+
+=======================================================================================
+getSupportedDepthFormat() : 30th July 2025
+
+createImagesAndImageView() -> getSupportedDepthFormat() is successed 
+createImagesAndImageView() -> vkCreateImage() is successed 
+createImagesAndImageView() -> vkAllocateMemory() 
+createUniformBuffer() -> vkBindBufferMemory() 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() for vkImageView_depth is successed : 
+
+=======================================================================================
+RenderPass() : 12th March 2025
+
+createRenderPass() -> vkCreateRenderPass() successed
+
+=======================================================================================
+
+=======================================================================================
+createDecriptorSetLayout() : 30th April 2025
+
+createPipelineLayout() -> vkCreatePipeLineLayout() successed
+
+=======================================================================================
+
+===========================================================================================================================
+createPipeline() : 07th May 2025
+
+createPipeline() -> vkCreatePipelineCache() successed
+createPipeline() -> vkCreateGraphicsPipelines() successed
+
+===========================================================================================================================
+
+=======================================================================================
+createFramebuffers() : 12th March 2025
+
+createFramebuffers() -> vkCreateFramebuffer() successed at ith : 0
+createFramebuffers() -> vkCreateFramebuffer() successed at ith : 1
+
+=======================================================================================
+
+=======================================================================================
+createCommandBuffer() : 06th March 2025
+
+createCommandBuffer() -> vkAllocateCommandBuffers() successed at ith : 0
+createCommandBuffer() -> vkAllocateCommandBuffers() successed at ith : 1
+
+=======================================================================================
+
+=======================================================================================
+buildCommandBuffer() : 21st March 2025
+
+buildCommandBuffer() -> vkResetCommandBuffer() successed to reset for ith index 0
+buildCommandBuffer() -> vkBeginCommandBuffer() successed at ith index 0
+buildCommandBuffer() -> vkEndCommandBuffer() successed at ith index 0
+buildCommandBuffer() -> vkResetCommandBuffer() successed to reset for ith index 1
+buildCommandBuffer() -> vkBeginCommandBuffer() successed at ith index 1
+buildCommandBuffer() -> vkEndCommandBuffer() successed at ith index 1
+
+=======================================================================================
+resize() -> vkDevice vkDeviceWaitIdle() is done. 
+resize() -> vkDestroyFramebuffer() is done. 
+resize() -> vkFreeCommandBuffers() is done. 
+uninitialise() -> vkDestroyPipeline() is done. 
+resize() -> vkDestroyPipelineLayout() is done.
+resize() -> vkDestroyRenderPass() is done. 
+resize() -> vkDestroyImageView() is done. 
+resize() -> swapchainimageView_array is free. 
+resize() -> swapchainImage_array is free. 
+resize() -> vkDestroySwapchainKHR() is done. 
+=====================================================================================
+
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 1st call is successed. 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 2nd call  is successed. 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> formatCount: 5 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkSurfaceFormatKHR_array free 
+=====================================================================================
+createSwapchain() -> getPhysicalDeviceSurfaceFormatAndColorSpace() is successed. 
+createSwapchain() -> vkGetPhysicalDeviceSurfaceCapabilitiesKHR() is successed. 
+createSwapchain() -> in if () swapchain image width X height = 800 X 600 
+createSwapchain() -> if vkSurfaceTransformFlagBitsKHR = VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR
+=====================================================================================
+
+getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 1st call is successed. 
+getPhysicalDevicePresentMode() -> presentationModesCount : 5 
+getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 2nd call is successed. 
+getPhysicalDevicePresentMode() -> for loop -> vkPresentModeKHR = VK_PRESENT_MODE_MAILBOX_KHR; 
+getPhysicalDevicePresentMode() -> vkPresentModeKHR_array() free done
+
+=====================================================================================
+createSwapchain() -> getPhysicalDevicePresentMode() is successed. 
+createSwapchain() -> vkCreateSwapchainKHR() is successed. 
+
+=======================================================================================
+createImagesAndImageView() : 06th March 2025
+
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() 1st call is successed. And swapchain image count 2 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() 2nd call is successed
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() in loop is successed at ith : 0 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() in loop is successed at ith : 1 
+
+=======================================================================================
+
+==================================== For Depth Image =============================================
+
+=======================================================================================
+getSupportedDepthFormat() : 30th July 2025
+
+createImagesAndImageView() -> getSupportedDepthFormat() is successed 
+createImagesAndImageView() -> vkCreateImage() is successed 
+createImagesAndImageView() -> vkAllocateMemory() 
+createUniformBuffer() -> vkBindBufferMemory() 
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() for vkImageView_depth is successed : 
+
+=======================================================================================
+RenderPass() : 12th March 2025
+
+createRenderPass() -> vkCreateRenderPass() successed
+
+=======================================================================================
+
+=======================================================================================
+createDecriptorSetLayout() : 30th April 2025
+
+createPipelineLayout() -> vkCreatePipeLineLayout() successed
+
+=======================================================================================
+
+===========================================================================================================================
+createPipeline() : 07th May 2025
+
+createPipeline() -> vkCreatePipelineCache() successed
+createPipeline() -> vkCreateGraphicsPipelines() successed
+
+===========================================================================================================================
+
+=======================================================================================
+createFramebuffers() : 12th March 2025
+
+createFramebuffers() -> vkCreateFramebuffer() successed at ith : 0
+createFramebuffers() -> vkCreateFramebuffer() successed at ith : 1
+
+=======================================================================================
+
+=======================================================================================
+createCommandBuffer() : 06th March 2025
+
+createCommandBuffer() -> vkAllocateCommandBuffers() successed at ith : 0
+createCommandBuffer() -> vkAllocateCommandBuffers() successed at ith : 1
+
+=======================================================================================
+
+=======================================================================================
+buildCommandBuffer() : 21st March 2025
+
+buildCommandBuffer() -> vkResetCommandBuffer() successed to reset for ith index 0
+buildCommandBuffer() -> vkBeginCommandBuffer() successed at ith index 0
+buildCommandBuffer() -> vkEndCommandBuffer() successed at ith index 0
+buildCommandBuffer() -> vkResetCommandBuffer() successed to reset for ith index 1
+buildCommandBuffer() -> vkBeginCommandBuffer() successed at ith index 1
+buildCommandBuffer() -> vkEndCommandBuffer() successed at ith index 1
+
+=======================================================================================
+resize() -> vkDevice vkDeviceWaitIdle() is done. 
+resize() -> vkDestroyFramebuffer() is done. 
+resize() -> vkFreeCommandBuffers() is done. 
+uninitialise() -> vkDestroyPipeline() is done. 
+resize() -> vkDestroyPipelineLayout() is done.
+resize() -> vkDestroyRenderPass() is done. 
+resize() -> vkDestroyImageView() is done. 
+resize() -> swapchainimageView_array is free. 
+resize() -> swapchainImage_array is free. 
+resize() -> vkDestroySwapchainKHR() is done. 
+=====================================================================================
+
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 1st call is successed. 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkGetPhysicalDeviceSurfaceFormatsKHR() 2nd call  is successed. 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> formatCount: 5 
+getPhysicalDeviceSurfaceFormatAndColorSpace() -> vkSurfaceFormatKHR_array free 
+=====================================================================================
+createSwapchain() -> getPhysicalDeviceSurfaceFormatAndColorSpace() is successed. 
+createSwapchain() -> vkGetPhysicalDeviceSurfaceCapabilitiesKHR() is successed. 
+createSwapchain() -> in if () swapchain image width X height = 784 X 561 
+createSwapchain() -> if vkSurfaceTransformFlagBitsKHR = VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR
+=====================================================================================
+
+getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 1st call is successed. 
+getPhysicalDevicePresentMode() -> presentationModesCount : 5 
+getPhysicalDevicePresentMode() -> vkGetPhysicalDeviceSurfacePresentModesKHR() 2nd call is successed. 
+getPhysicalDevicePresentMode() -> for loop -> vkPresentModeKHR = VK_PRESENT_MODE_MAILBOX_KHR; 
+getPhysicalDevicePresentMode() -> vkPresentModeKHR_array() free done
+
+=====================================================================================
+createSwapchain() -> getPhysicalDevicePresentMode() is successed. 
+createSwapchain() -> vkCreateSwapchainKHR() is successed. 
+
+=======================================================================================
+createImagesAndImageView() : 06th March 2025
+
+createImagesAndImageView() -> vkGetSwapchainImagesKHR() 1st call is successed
